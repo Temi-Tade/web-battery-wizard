@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anta">
+    <title>Battery Wizard</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Battery Wizard</h1>
+        </header>
+        <em style="text-align: center; display: block; padding: .25rem;">Click the <strong>Check Battery</strong> button below to check your battery charging status</em>
+
+        <div id="container">
+            <div id="battery">
+                <div id="battery-head"></div>
+                <div id="battery-body">
+                    <div id="level"></div>
+                </div>
+                <div id="check-btn-wrap">
+                    <button onclick="GET_BATTERY_STATUS()">Check Battery</button>
+                    <label for="sync"><input type="checkbox" name="sync" id="sync" oninput="LAUNCH_SYNC_MODE(this.checked)">&nbsp; Run Synchronously</label>
+                </div>
+            </div>
+            <div id="info-wrap">
+                <div id="info">
+                    <table></table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
